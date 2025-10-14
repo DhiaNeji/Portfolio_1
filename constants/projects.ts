@@ -77,8 +77,8 @@ export const projects = [
     ],
     feedback: true,
     links: {
-      live: "https://adi-ten.vercel.app",
-      github: "https://github.com/adityadomle",
+      live: "https://aadi.is-a.dev",
+      github: "https://github.com/adityadomle/My-Portfolio",
     },
   },
   {
