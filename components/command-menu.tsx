@@ -73,7 +73,7 @@ export function CommandMenu({ ...props }: DialogProps) {
           <CommandGroup heading="Links">
             {docsConfig.mainNav
               .filter((navitem: any) => !navitem.external)
-              .map((navItem) => (
+              .map((navItem: any) => (
                 <CommandItem
                   key={navItem.href}
                   value={navItem.title}
@@ -81,14 +81,14 @@ export function CommandMenu({ ...props }: DialogProps) {
                     runCommand(() => router.push(navItem.href as string));
                   }}
                 >
-                  <File />
+                  <File className="mr-2 h-4 w-4" />
                   {navItem.title}
                 </CommandItem>
               ))}
           </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
+          {docsConfig.sidebarNav.map((group: any) => (
             <CommandGroup key={group.title} heading={group.title}>
-              {group.items.map((navItem) => (
+              {group.items.map((navItem: any) => (
                 <CommandItem
                   key={navItem.href}
                   value={navItem.title}
@@ -96,8 +96,8 @@ export function CommandMenu({ ...props }: DialogProps) {
                     runCommand(() => router.push(navItem.href as string));
                   }}
                 >
-                  <div className="flex items-center justify-center w-4 h-4 mr-2">
-                    <Circle className="w-3 h-3" />
+                  <div className="mr-2 flex h-4 w-4 items-center justify-center">
+                    <Circle className="h-3 w-3" />
                   </div>
                   {navItem.title}
                 </CommandItem>
@@ -107,15 +107,15 @@ export function CommandMenu({ ...props }: DialogProps) {
           <CommandSeparator />
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
-              <Sun />
+              <Sun className="mr-2 h-4 w-4" />
               Light
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
-              <Moon />
+              <Moon className="mr-2 h-4 w-4" />
               Dark
             </CommandItem>
             <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
-              <Laptop />
+              <Laptop className="mr-2 h-4 w-4" />
               System
             </CommandItem>
           </CommandGroup>
