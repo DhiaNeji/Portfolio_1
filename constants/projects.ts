@@ -56,8 +56,7 @@ export const projects = [
     ],
     techStack: [
       "Next.js",
-      "React",
-      "Mongoose",
+      "SadCn/UI",
       "MongoDB",
       "Tailwind CSS",
       "Radix UI",
