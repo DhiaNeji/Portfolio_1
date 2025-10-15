@@ -40,12 +40,12 @@ export async function SiteFooter() {
             </Link>{" "}
             · Source code available on{" "}
             <Link
-              href={siteConfig.links.github}
+              href="https://topmate.io/aditya_domle/1773422"
               target="_blank"
               rel="noreferrer"
               className="font-medium transition-colors text-primary hover:text-primary/80"
             >
-              GitHub
+              Topmate
             </Link>
           </div>
         </div>
