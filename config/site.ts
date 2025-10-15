@@ -20,7 +20,7 @@ export const siteConfig = {
     shadcn: 'https://ui.shadcn.com/',
     telegram: 'https://t.me/nexjsx',
     twitter: 'https://x.com/env_aditya',
-    github: 'https://github.com/adityadomle/My-Portfolio',
+    github: 'https://github.com/adityadomle',
     githubProfile: 'https://github.com/adityadomle',
     resume: '',
     email: 'mailto:adityadomle14@gmail.com',

@@ -13,8 +13,8 @@ export const education: TimelineViewerData[] = [
     description: `I completed my 12th in Information Technology from NPW Science College, Lakhani, Maharashtra.`,
   },
   {
-    title: 'Secondary Education · Shivaji Vidyalaya Seloti · SEE',
-    date: 'Apr. 2005 - Mar. 2021',
+    title: 'Secondary Education · Shivaji Vidyalaya Seloti/Manegaon · SEE',
+    date: 'Apr. 2012 - Mar. 2021',
     description: `I completed my foundational education up to SEE at Shivaji Vidyalaya, Seloti/Manegaon.`,
   },
 ];
