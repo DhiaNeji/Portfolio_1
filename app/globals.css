@@ -117,8 +117,28 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply scroll-smooth;
+  @apply scroll-smooth;
+  font-size: 100%; /* mobile default */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 105%; /* tablets */
   }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 110%; /* laptops */
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 115%; /* big screens */
+  }
+}
+
   body {
     @apply bg-background text-foreground overscroll-none;
     font-synthesis-weight: none;
@@ -184,7 +204,7 @@
   }
 
   .container-wrapper {
-    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl min-[1400px]:border-x border-border/70 dark:border-border mx-auto w-full border-dashed;
+    @apply max-w-[1600px] min-[1800px]:max-w-screen-2xl min-[1400px]:border-x border-border/70 dark:border-border mx-auto w-full border-dashed;
   }
 
   .container {
