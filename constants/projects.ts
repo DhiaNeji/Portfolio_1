@@ -78,7 +78,7 @@ export const projects = [
     feedback: true,
     links: {
       live: "https://aadi.is-a.dev",
-      github: "https://github.com/adityadomle/My-Portfolio",
+      github: "https://topmate.io/aditya_domle/1773422",
     },
   },
   {
