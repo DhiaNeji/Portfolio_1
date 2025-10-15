@@ -12,8 +12,8 @@ export function MainNav() {
   const pathname = usePathname();
 
   return (
-    <div className="hidden mr-4 md:flex">
-      <Link href="/" className="flex items-center gap-2 mr-4 lg:mr-6">
+    <div className="mr-4 hidden md:flex">
+      <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
         <Icons.logo />
         <span className="hidden font-bold lg:inline-block">
           {siteConfig.name}
@@ -24,7 +24,7 @@ export function MainNav() {
           href="/"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/docs/installation"
+            pathname === "/"
               ? "text-foreground"
               : "text-foreground/80"
           )}
@@ -34,23 +34,18 @@ export function MainNav() {
 
         <Link
           target="_blank"
-          href="https://aadi.is-a.dev"
-          className={cn(
-            "transition-colors hover:text-foreground/80 flex gap-1",
-            pathname?.startsWith("/blog")
-              ? "text-foreground"
-              : "text-foreground/80"
-          )}
+          href="https://www.linkedin.com/in/adityadomle/"
+          className="flex items-center gap-1 text-foreground/80 transition-colors hover:text-foreground/80"
         >
-          Blog <ExternalLink className="size-3" />
+          LinkedIn <ExternalLink className="h-3 w-3" />
         </Link>
 
         <Link
           href={siteConfig.links.resume}
           target="_blank"
-          className="flex gap-1"
+          className="flex items-center gap-1 text-foreground/80 transition-colors hover:text-foreground/80"
         >
-          Resume <ExternalLink className="size-3" />
+          Resume <ExternalLink className="h-3 w-3" />
         </Link>
       </nav>
     </div>

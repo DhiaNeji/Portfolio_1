@@ -4,10 +4,6 @@ export const docsConfig = {
       title: 'Home',
       href: '/',
     },
-    //   {
-    //     title: "Blog", 
-    //     href: "https://imaditya.vercel.app/about",
-    //   },
   ],
   sidebarNav: [
     {
@@ -43,11 +39,6 @@ export const docsConfig = {
           href: '/education',
           items: [],
         },
-        // {
-        //   title: "Testimonials",
-        //   href: "/testimonials",
-        //   items: [],
-        // },
         {
           title: 'Contact',
           href: '/contact',
