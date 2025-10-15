@@ -54,11 +54,21 @@ export const Icons = {
       />
     </svg>
   ),
-  ReactQueryIcon: (props: IconProps) => (
-    <svg viewBox="0 0 256 256" {...props}>
+  html: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <title>HTML5</title>
       <path
-        fill="currentColor"
-        d="M128 0C57.31 0 0 57.31 0 128s57.31 128 128 128 128-57.31 128-128S198.69 0 128 0zm0 230c-56.56 0-102-45.44-102-102S71.44 26 128 26s102 45.44 102 102-45.44 102-102 102z"
+        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
+        fill="#E34F26"
+      />
+    </svg>
+  ),
+  css: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <title>CSS3</title>
+      <path
+        d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
+        fill="#1572B6"
       />
     </svg>
   ),
@@ -70,32 +80,9 @@ export const Icons = {
       />
     </svg>
   ),
-  PostgreSQLIcon: (props: IconProps) => (
-    <svg viewBox="0 0 256 256" {...props}>
-      <path
-        fill="currentColor"
-        d="M128 0C57.31 0 0 57.31 0 128s57.31 128 128 128 128-57.31 128-128S198.69 0 128 0zm0 230c-56.56 0-102-45.44-102-102S71.44 26 128 26s102 45.44 102 102-45.44 102-102 102z"
-      />
-    </svg>
-  ),
-  PrismaIcon: (props: IconProps) => (
-    <svg viewBox="0 0 256 256" {...props}>
-      <path fill="currentColor" d="M128 0L0 128l128 128 128-128L128 0z" />
-    </svg>
-  ),
   SupabaseIcon: (props: IconProps) => (
     <svg viewBox="0 0 256 256" {...props}>
       <path fill="currentColor" d="M0 128L128 0l128 128-128 128L0 128z" />
-    </svg>
-  ),
-  GraphQLIcon: (props: IconProps) => (
-    <svg viewBox="0 0 400 400" {...props}>
-      <path fill="currentColor" d="M200 0a200 200 0 1 0 0 400 200 200 0 0 0 0-400z" />
-    </svg>
-  ),
-  ESLintIcon: (props: IconProps) => (
-    <svg viewBox="0 0 256 256" {...props}>
-      <path fill="currentColor" d="M128 0l128 74v108l-128 74-128-74V74L128 0z" />
     </svg>
   ),
   npm: (props: IconProps) => (
