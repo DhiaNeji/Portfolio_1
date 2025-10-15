@@ -4,6 +4,7 @@ import * as React from "react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 import { FiMusic } from "react-icons/fi";
+import { X } from "lucide-react";
 
 import { docsConfig } from "@/config/docs";
 import { cn } from "@/lib/utils";
@@ -21,7 +22,15 @@ interface MobileNavProps {
 
 export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
   const [open, setOpen] = React.useState(false);
+  const [time, setTime] = React.useState(new Date());
   const { setMetaColor, metaColor } = useMetaColor();
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   const onOpenChange = React.useCallback(
     (open: boolean) => {
@@ -31,12 +40,20 @@ export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
     [setMetaColor, metaColor]
   );
 
+  const formattedTime = time.toLocaleTimeString('en-IN', {
+    timeZone: 'Asia/Kolkata',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  });
+
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
         <Button
           variant="ghost"
-          className="w-full h-8 gap-4 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          size="icon"
+          className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted md:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,96 +61,119 @@ export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="!size-6"
+            className="h-5 w-5"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
           </svg>
-          <span className="sr-only">Toggle Menu</span>
-          <span className="flex items-center justify-between flex-1 h-8 px-2 text-sm font-normal border rounded-md shadow-none bg-muted/50 text-muted-foreground">
-            Search sections...
-          </span>
         </Button>
       </DrawerTrigger>
 
-      <DrawerTitle>
-        <DrawerContent className="max-h-[80svh] p-0">
-          <div className="p-6 overflow-auto">
-            {/* Header */}
-            <div className="flex items-center justify-between gap-2 my-6">
-              <h4 className="text-xl font-medium">Aditya Domle</h4>
-              <div className="flex items-center justify-center gap-4">
-                {/* Music Button */}
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="w-8 h-8 px-0 transition hover:scale-110"
-                  onClick={toggleMusic}
-                  title={playing ? "Pause Music" : "Play Music"}
-                >
-                  <FiMusic
-                    className={`w-6 h-6 ${playing ? "text-pink-500" : "text-foreground/60"}`}
-                  />
-                </Button>
+      <DrawerTitle className="sr-only">Navigation Menu</DrawerTitle>
+      
+      <DrawerContent className="h-[88vh] border-t border-border/40 bg-background/95 backdrop-blur-xl">
+        <div className="flex h-full flex-col">
+          {/* Compact Header */}
+          <div className="flex items-center justify-between border-b border-border/40 px-5 py-3">
+            <div className="flex items-center gap-2.5">
+              <Icons.logo className="h-5 w-5" />
+              <span className="text-base font-semibold">{siteConfig.name}</span>
+            </div>
 
-                {/* Mode Switcher */}
-                <ModeSwitcher className="w-6 h-6" />
-
-                {/* GitHub - smaller for mobile */}
-                <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
-                  <Icons.gitHub className="w-5 h-5" />
-                </Link>
+            <div className="flex items-center gap-1">
+              {/* Small Clock with AM/PM */}
+              <div className="flex items-center gap-1.5 rounded-full bg-muted/50 px-2.5 py-1">
+                <div className="h-1.5 w-1.5 rounded-full bg-green-500" />
+                <span className="text-xs font-medium tabular-nums">{formattedTime}</span>
               </div>
-            </div>
 
-            {/* Main Nav */}
-            <div className="flex flex-col space-y-3">
-              {docsConfig.mainNav?.map(
-                (item) =>
-                  item.href && (
-                    <MobileLink key={item.href} href={item.href} onOpenChange={setOpen}>
-                      {item.title}
-                    </MobileLink>
-                  )
-              )}
-            </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"
+                onClick={toggleMusic}
+              >
+                <FiMusic className={`h-4 w-4 ${playing ? "text-pink-500" : "text-muted-foreground"}`} />
+              </Button>
 
-            {/* Sidebar Nav */}
-            <div className="flex flex-col space-y-2">
-              {docsConfig.sidebarNav.map((item, index) => (
-                <div key={index} className="flex flex-col gap-4 pt-6">
-                  <h4 className="text-xl font-medium">{item.title}</h4>
-                  {item?.items?.length &&
-                    item.items.map((item: any) => (
-                      <React.Fragment key={item.href}>
-                        {!item.disabled &&
-                          (item.href ? (
-                            <MobileLink
-                              href={item.href}
-                              onOpenChange={setOpen}
-                              className="opacity-80"
-                            >
-                              {item.title}
-                              {item.label && (
-                                <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
-                                  {item.label}
-                                </span>
-                              )}
-                            </MobileLink>
-                          ) : (
-                            item.title
-                          ))}
-                      </React.Fragment>
+              <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full" asChild>
+                <div><ModeSwitcher className="h-4 w-4" /></div>
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"
+                onClick={() => setOpen(false)}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Main Content - Scrollable */}
+          <div className="flex-1 overflow-y-auto px-5 py-4">
+            <div className="space-y-6">
+              {/* Primary Nav */}
+              <div className="space-y-1">
+                <MobileLink
+                  href="/"
+                  onOpenChange={setOpen}
+                  className="group flex items-center justify-between rounded-xl border border-border/40 bg-muted/30 px-4 py-3 text-sm font-medium transition-all hover:border-border hover:bg-muted/50"
+                >
+                  <span>Home</span>
+                  <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </MobileLink>
+              </div>
+
+              {/* All Sections - Modern Cards */}
+              {docsConfig.sidebarNav.map((section, index) => (
+                <div key={index} className="space-y-2">
+                  <div className="flex items-center gap-2 px-1">
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border/50 to-transparent" />
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                      {section.title}
+                    </h3>
+                    <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border/50 to-transparent" />
+                  </div>
+                  <div className="space-y-1">
+                    {section?.items?.map((item: any) => (
+                      item.href && !item.disabled && (
+                        <MobileLink
+                          key={item.href}
+                          href={item.href}
+                          onOpenChange={setOpen}
+                          className="group flex items-center justify-between rounded-lg border border-border/30 bg-background/50 px-3 py-2.5 text-sm transition-all hover:border-border/60 hover:bg-muted/30"
+                        >
+                          <span className="font-medium">{item.title}</span>
+                          <div className="flex items-center gap-2">
+                            {item.label && (
+                              <span className="rounded-md bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">
+                                {item.label}
+                              </span>
+                            )}
+                            <svg className="h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </MobileLink>
+                      )
                     ))}
+                  </div>
                 </div>
               ))}
             </div>
+          </div>
 
-            <p className="text-xs text-center text-muted-foreground">
-              — End of the menu —
+          {/* Simple Footer */}
+          <div className="border-t border-border/40 bg-muted/20 px-5 py-4">
+            <p className="text-center text-xs text-muted-foreground/60">
+              — End of The Menu —
             </p>
           </div>
-        </DrawerContent>
-      </DrawerTitle>
+        </div>
+      </DrawerContent>
     </Drawer>
   );
 }
@@ -153,7 +193,7 @@ function MobileLink({ href, onOpenChange, className, children, ...props }: Mobil
         router.push(href.toString());
         onOpenChange?.(false);
       }}
-      className={cn("text-[1.15rem] border-b border-border pb-2", className)}
+      className={cn(className)}
       {...props}
     >
       {children}
