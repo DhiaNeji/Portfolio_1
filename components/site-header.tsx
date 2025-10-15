@@ -36,62 +36,89 @@ export function SiteHeader() {
     setPlaying(!playing);
   };
 
-  // Format time as HH:MM AM/PM IST
+  // Format time as HH:MM:SS
   const formattedTime = time.toLocaleTimeString('en-IN', {
     timeZone: 'Asia/Kolkata',
     hour: '2-digit',
     minute: '2-digit',
-    hour12: true,
+    second: '2-digit',
+    hour12: false,
   });
 
   return (
-    <header className="border-grid sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container-wrapper">
-        <div className="container flex h-14 items-center gap-2 md:gap-4">
+        <div className="container flex h-16 items-center">
+          {/* Logo/Name - Left */}
           <MainNav />
 
-          {/* Mobile Nav receives toggleMusic & playing */}
+          {/* Mobile Nav */}
           <MobileNav toggleMusic={toggleMusic} playing={playing} />
 
-          {/* Desktop Nav */}
-          <div className="ml-auto hidden items-center gap-2 md:flex md:flex-1 md:justify-end">
-            <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
+          {/* Desktop Nav - Right */}
+          <div className="ml-auto flex items-center gap-2 md:gap-3">
+            {/* Command Menu - Hidden on mobile */}
+            <div className="hidden md:block">
               <CommandMenu />
             </div>
 
-            <nav className="flex items-center gap-3">
-              {/* Clock */}
-              <div className="hidden items-center gap-1.5 rounded-md bg-muted/50 px-2.5 py-1 text-xs font-medium text-muted-foreground lg:flex">
-                <span className="text-base">🇮🇳</span>
-                <span>{formattedTime}</span>
+            {/* Live Clock */}
+            <div className="hidden items-center gap-2 rounded-full border border-border/40 bg-muted/30 px-3 py-1.5 backdrop-blur-sm lg:flex">
+              <div className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
               </div>
+              <span className="text-xs font-medium tabular-nums tracking-tight text-foreground">
+                {formattedTime}
+              </span>
+            </div>
 
-              {/* Music */}
+            {/* Action Buttons */}
+            <div className="flex items-center gap-1">
+              {/* Music Toggle */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-8 w-8 px-0 transition hover:scale-110"
+                className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted"
                 onClick={toggleMusic}
                 title={playing ? "Pause Music" : "Play Music"}
               >
                 <FiMusic
-                  className={`h-6 w-6 ${playing ? "text-pink-500" : "text-foreground/60"}`}
+                  className={`h-[18px] w-[18px] transition-colors ${
+                    playing ? "text-pink-500" : "text-muted-foreground"
+                  }`}
                 />
               </Button>
 
-              {/* Mode Switcher */}
-              <ModeSwitcher className="h-6 w-6" />
+              {/* Theme Toggle */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted"
+                asChild
+              >
+                <div>
+                  <ModeSwitcher className="h-[18px] w-[18px]" />
+                </div>
+              </Button>
 
               {/* GitHub */}
-              <Link 
-                href={siteConfig.links.github} 
-                target="_blank" 
-                rel="noreferrer"
-                className="transition-colors hover:text-foreground text-muted-foreground"
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-9 w-9 rounded-full transition-all hover:scale-105 hover:bg-muted"
+                asChild
               >
-                <Icons.gitHub className="h-6 w-6" />
-              </Link>
-            </nav>
+                <Link 
+                  href={siteConfig.links.github} 
+                  target="_blank" 
+                  rel="noreferrer"
+                >
+                  <Icons.gitHub className="h-[18px] w-[18px]" />
+                  <span className="sr-only">GitHub</span>
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
