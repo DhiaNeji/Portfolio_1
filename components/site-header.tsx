@@ -48,7 +48,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container-wrapper">
-        <div className="container flex h-16 items-center">
+        <div className="container flex h-13 items-center">
           {/* Logo/Name - Left */}
           <MainNav />
 

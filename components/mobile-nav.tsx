@@ -92,7 +92,7 @@ export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
                 className="h-8 w-8 rounded-full"
                 onClick={toggleMusic}
               >
-                <FiMusic className={`h-4 w-4 ${playing ? "text-pink-500" : "text-muted-foreground"}`} />
+                <FiMusic className={`h-4 w-4 ${playing ? "text-blue-500" : "text-muted-foreground"}`} />
               </Button>
 
               <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full" asChild>
