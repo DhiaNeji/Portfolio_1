@@ -166,46 +166,7 @@ export function MobileNav({ toggleMusic, playing }: MobileNavProps) {
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="border-t border-border/40 bg-background/95 px-5 py-4">
-            <div className="flex flex-col items-center justify-center space-y-2">
-              <div className="text-xs leading-relaxed text-center text-balance text-muted-foreground">
-                <span className="block">© 2023 - {new Date().getFullYear()}</span>
-                <span className="block mt-1">
-                  Built with{" "}
-                  <span className="font-medium text-foreground">Next.js</span>,{" "}
-                  <span className="font-medium text-foreground">shadcn/ui</span> and{" "}
-                  <span className="font-medium text-foreground">Tailwind CSS</span>
-                </span>
-                <span className="block mt-1">
-                  Coded in{" "}
-                  <span className="font-medium text-foreground">Cursor</span> and
-                  deployed with{" "}
-                  <span className="font-medium text-foreground">Vercel</span>
-                </span>
-              </div>
-              <div className="text-xs text-center text-muted-foreground">
-                Developed by{" "}
-                <Link
-                  href={siteConfig.links.githubProfile}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium transition-colors text-primary hover:text-primary/80"
-                >
-                  Aditya Domle
-                </Link>{" "}
-                · Source code available on{" "}
-                <Link
-                  href="https://topmate.io/aditya_domle/1773422"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium transition-colors text-primary hover:text-primary/80"
-                >
-                  Topmate
-                </Link>
-              </div>
-            </div>
-          </div>
+
         </div>
       </DrawerContent>
     </Drawer>
