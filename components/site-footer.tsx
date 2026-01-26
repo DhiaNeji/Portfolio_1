@@ -9,7 +9,7 @@ export async function SiteFooter() {
       <div className="container-wrapper">
         <div className="container flex flex-col items-center justify-center py-4 space-y-2">
           <div className="max-w-3xl text-xs leading-relaxed text-center sm:text-sm text-balance text-muted-foreground">
-            <span className="block sm:inline">©2025</span>
+            <span className="block sm:inline">©2026</span>
             <span className="hidden sm:inline"> · </span>
             <span className="block sm:inline">
               Built with{" "}

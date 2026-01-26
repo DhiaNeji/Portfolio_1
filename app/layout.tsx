@@ -1,5 +1,7 @@
 import { ThemeProvider } from '@/components/theme-provider';
 import { META_THEME_COLORS, siteConfig } from '@/config/site';
+import { LenisProvider } from '@/components/providers/lenis-provider';
+import 'lenis/dist/lenis.css';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
@@ -103,31 +105,33 @@ export default function RootLayout({ children }: RootLayoutProps) {
             disableTransitionOnChange
             enableColorScheme
           >
-            <div vaul-drawer-wrapper="">
-              <div className="relative flex flex-col min-h-svh bg-background">
-                <div
-                  data-wrapper=""
-                  className="flex flex-col flex-1 border-grid"
-                >
-                  <SiteHeader />
-                  <main className="flex flex-col flex-1">
-                    <div className="container-wrapper">
-                      <div className="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
-                        <aside className="border-grid fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 border-r md:sticky md:block">
-                          <div className="h-full py-6 pr-4 overflow-auto no-scrollbar lg:py-8">
-                            <SideNav config={docsConfig} />
+            <LenisProvider>
+              <div vaul-drawer-wrapper="">
+                <div className="relative flex flex-col min-h-svh bg-background">
+                  <div
+                    data-wrapper=""
+                    className="flex flex-col flex-1 border-grid"
+                  >
+                    <SiteHeader />
+                    <main className="flex flex-col flex-1">
+                      <div className="container-wrapper">
+                        <div className="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+                          <aside className="border-grid fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 border-r md:sticky md:block">
+                            <div className="h-full py-6 pr-4 overflow-auto no-scrollbar lg:py-8">
+                              <SideNav config={docsConfig} />
+                            </div>
+                          </aside>
+                          <div className="flex flex-col flex-1 py-6 pr-4 lg:py-8">
+                            {children}
                           </div>
-                        </aside>
-                        <div className="flex flex-col flex-1 py-6 pr-4 lg:py-8">
-                          {children}
                         </div>
                       </div>
-                    </div>
-                  </main>
-                  <SiteFooter />
+                    </main>
+                    <SiteFooter />
+                  </div>
                 </div>
               </div>
-            </div>
+            </LenisProvider>
           </ThemeProvider>
           <Toaster richColors position="top-center" />
           <GoogleAnalytics
