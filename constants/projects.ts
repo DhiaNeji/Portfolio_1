@@ -42,12 +42,12 @@ export const projects = [
     profile: "https://www.upwork.com/freelancers/~0114010eb503c6881e",
   },
   testimonials: [
-    "/upwork_1.png",
-    "/upwork_2.png",
-    "/upwork_3.png",
-    "/upwork_4.png",
-    "/upwork_5.png",
-    "/upwork_6.png",
+    "/images/upwork_1.png",
+    "/images/upwork_2.png",
+    "/images/upwork_3.png",
+    "/images/upwork_4.png",
+    "/images/upwork_5.png",
+    "/images/upwork_6.png",
   ],
 
 },
@@ -92,11 +92,11 @@ export const projects = [
     report: "https://drive.google.com/file/d/1NuRGh5XOkEioUd6nBGUUQG9BLrHHpJHm/view?usp=sharing"
   },
   images: [
-    "/timesheet_1.png",
-    "/timesheet_2.png",
-    "/timesheet_3.png",
-    "/timesheet_4.png", 
-    "/timesheet_5.png",
+    "/images/timesheet_1.png",
+    "/images/timesheet_2.png",
+    "/images/timesheet_3.png",
+    "/images/timesheet_4.png", 
+    "/images/timesheet_5.png",
   ],
 },
   {
@@ -140,11 +140,11 @@ export const projects = [
     github: "https://github.com/DhiaNeji/FullStack-Calendar",
   },
     images: [
-    "/calendar_1.png",
-    "/calendar_2.png",
-    "/calendar_3.png",
-    "/calendar_4.png", 
-    "/calendar_5.png",
+    "/images/calendar_1.png",
+    "/images/calendar_2.png",
+    "/images/calendar_3.png",
+    "/images/calendar_4.png", 
+    "/images/calendar_5.png",
   ],
 },
  {
