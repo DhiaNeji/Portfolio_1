@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { FiMusic } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
@@ -14,17 +14,9 @@ import { Icons } from "./icons";
 
 export function SiteHeader() {
   const [playing, setPlaying] = useState(false);
-  const [time, setTime] = useState(new Date());
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Update time every second
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
 
   const toggleMusic = () => {
     if (!audioRef.current) return;
@@ -36,14 +28,7 @@ export function SiteHeader() {
     setPlaying(!playing);
   };
 
-  // Format time as HH:MM:SS
-  const formattedTime = time.toLocaleTimeString('en-IN', {
-    timeZone: 'Asia/Kolkata',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false,
-  });
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">

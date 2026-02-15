@@ -6,7 +6,6 @@ import {
 } from '@/components/page-header';
 import { Badge } from '@/components/ui/badge';
 
-import { siteConfig } from '@/config/site';
 import { ArrowLeftIcon, ExternalLinkIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from "next/image";

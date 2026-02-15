@@ -1,4 +1,3 @@
-import { title } from "process";
 
 export const mySkills = [
   { title: "Java", icon: "_java" },

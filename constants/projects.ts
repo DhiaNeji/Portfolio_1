@@ -1,4 +1,3 @@
-import TestimonialsPage from "@/app/testimonials/page";
 
 export const projects = [
   {
