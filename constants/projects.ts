@@ -1,198 +1,269 @@
+import TestimonialsPage from "@/app/testimonials/page";
+
 export const projects = [
   {
-    title: "Nike Reimagined | Modern Redesign Concept",
-    slug: "nike-reimagined",
-    tagline:
-      "A sleek and modern redesign of Nike’s official web experience built with React and Tailwind CSS.",
-    overview:
-      "Nike Reimagined is a creative redesign project focused on delivering a refined, high-performance web experience inspired by Nike’s global brand identity. It highlights a clean, minimal UI with smooth transitions, responsive layouts, and optimized performance across devices. The project demonstrates a balance of aesthetics and functionality for a real-world eCommerce feel.",
-    features: [
-      "Minimalist and modern user interface design",
-      "Fully responsive layouts optimized for all devices",
-      "Smooth page transitions and animations with Framer Motion",
-      "Optimized build process with Vite for fast loading",
-      "Deployed on Vercel for production-grade performance",
-    ],
-    techStack: [
-      "React.js",
-      "Tailwind CSS",
-      "Vite",
-      "Framer Motion",
-      "Vercel",
-    ],
-    challenges: [
-      "Maintaining brand consistency while reimagining Nike’s design language.",
-      "Achieving smooth animations without affecting performance.",
-      "Ensuring pixel-perfect responsiveness across devices.",
-      "Optimizing load times for a better user experience.",
-    ],
-    learnings: [
-      "Mastered efficient UI composition with React and Tailwind CSS.",
-      "Improved understanding of animation principles using Framer Motion.",
-      "Enhanced deployment workflow using Vercel and Vite integration.",
-      "Developed better practices for responsive and scalable frontend design.",
-    ],
-    feedback: false,
-    links: {
-      live: "https://nike-reimagined-mu.vercel.app/",
-      github: "https://github.com/adityadomle/nike-reimagined",
-    },
+  title: "Upwork | Java Freelancer",
+  slug: "java-freelancer-upwork",
+  tagline:
+    "Freelance Java developer delivering scalable web applications for global clients on Upwork.",
+  overview:
+    "As a Java Freelancer on Upwork, I design, develop, and deliver high-quality web applications tailored to client needs. I work across the full stack, building robust backend systems with Java, JEE, and Spring Boot, and modern frontend interfaces using Angular, TypeScript, and JavaScript, while maintaining excellent client satisfaction and project success.",
+  features: [
+    "End-to-end design and development of client web applications",
+    "Backend development using Java, JEE, and Spring Boot",
+    "Frontend development with Angular, TypeScript, and modern JavaScript",
+    "Direct client collaboration and requirement analysis",
+    "Consistent delivery with five-star client feedback",
+  ],
+  techStack: [
+    "Java",
+    "Spring Boot",
+    "JEE",
+    "Angular",
+    "TypeScript",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "SQL",
+  ],
+  challenges: [
+    "Translating diverse client requirements into scalable technical solutions",
+    "Managing multiple projects and deadlines simultaneously",
+    "Ensuring code quality and maintainability across different domains",
+    "Adapting quickly to new technologies and client environments",
+  ],
+  learnings: [
+    "Strengthened full-stack development skills across enterprise and modern web stacks",
+    "Improved client communication and requirement analysis capabilities",
+    "Gained experience delivering production-ready applications independently",
+    "Enhanced problem-solving skills in real-world project environments",
+  ],
+  feedback: true,
+  links: {
+    profile: "https://www.upwork.com/freelancers/~0114010eb503c6881e",
   },
+  testimonials: [
+    "/projects/upwork/1.png",
+    "/projects/upwork/2.png",
+    "/projects/upwork/3.png",
+    "/projects/upwork/4.png",
+    "/projects/upwork/5.png",
+    "/projects/upwork/6.png",
+  ],
 
+},
   {
-    title: "Portfolio | Aditya Domle",
-    slug: "portfolio",
-    tagline:
-      "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
-    overview:
-      "My personal portfolio is built to highlight my journey as a developer. It integrates advanced features like profile views tracking, a love count mechanism, and server-side actions for seamless interactivity and performance.",
-    features: [
-      "API to track and display profile views in real-time.",
-      "Love count feature to allow visitors to express appreciation for the work.",
-      "Implemented server actions using the latest Next.js features.",
-      "Dynamic project listing with slug-based routing for detailed pages.",
-      "Mobile-responsive and optimized for all devices.",
-      "Integration with MongoDB using Mongoose for efficient data management.",
-    ],
-    techStack: [
-      "Next.js",
-      "SadCn/UI",
-      "MongoDB",
-      "Tailwind CSS",
-      "Radix UI",
-      "TypeScript",
-    ],
-    challenges: [
-      "Implementing real-time tracking for profile views efficiently.",
-      "Designing and integrating a scalable database schema with Mongoose.",
-      "Utilizing server actions for seamless and performant interactions.",
-      "Ensuring cross-browser and device compatibility for UI components.",
-    ],
-    learnings: [
-      "Deepened knowledge of Next.js server actions and their use cases.",
-      "Gained experience in designing interactive UI components.",
-      "Enhanced understanding of MongoDB operations and ORM with Mongoose.",
-      "Improved ability to optimize performance for web applications.",
-    ],
-    feedback: true,
-    links: {
-      live: "https://aadi.is-a.dev",
-      github: "https://topmate.io/aditya_domle/1773422",
-    },
+  title: "Planisware | Timesheet Management",
+  slug: "Planisware",
+  tagline:
+    "A sleek and modern redesign of Planisware timesheet management application built with Java, Vue, and Vite.",
+  overview:
+    "This project modernizes the Planisware timesheet management system with a focus on usability, performance, and clean design. It delivers an intuitive user experience, responsive layouts, and efficient workflows while integrating seamlessly with a robust Java backend to support real-world enterprise needs.",
+  features: [
+    "Clean and intuitive user interface for faster timesheet entry",
+    "Fully responsive layouts optimized for desktop and tablet usage",
+    "Real-time form validation and dynamic data handling",
+    "Optimized frontend performance with Vite",
+    "Seamless integration with Java backend services",
+  ],
+  techStack: [
+    "Java",
+    "Spring Boot",
+    "Vue 3",
+    "Vite",
+    "Tailwind CSS",
+    "PostgreSQL",
+    "Jboss"
+  ],
+  challenges: [
+    "Modernizing a legacy enterprise UI while preserving business workflows",
+    "Ensuring smooth performance with complex forms and validations",
+    "Maintaining data consistency between frontend and backend systems",
+    "Designing a scalable architecture for future feature expansion",
+  ],
+  learnings: [
+    "Strengthened skills in building enterprise-grade UIs with Vue",
+    "Improved frontend performance optimization using Vite",
+    "Gained experience integrating modern frontends with Java APIs",
+    "Enhanced understanding of usability-driven enterprise application design",
+  ],
+  feedback: false,
+  links: {
+    github: "",
+    report: "https://drive.google.com/file/d/1NuRGh5XOkEioUd6nBGUUQG9BLrHHpJHm/view?usp=sharing"
   },
+  images: [
+    "/projects/timesheet/1.png",
+    "/projects/timesheet/2.png",
+    "/projects/timesheet/3.png",
+    "/projects/timesheet/4.png", 
+    "/projects/timesheet/5.png",
+  ],
+},
   {
-    title: "News Hub | Real-Time News Platform",
-    slug: "news-hub",
-    tagline:
-      "A real-time news platform delivering the latest headlines across various categories using the News API.",
-    overview:
-      "News Hub is a responsive and dynamic web application designed to provide users with up-to-date news from India and around the world. Built with React and TypeScript, the platform integrates the News API to fetch real-time stories, organized into categories like technology, business, sports, and entertainment. The clean UI ensures a smooth reading experience, while the optimized frontend guarantees fast performance.",
-    features: [
-      "Real-time news updates fetched from the News API.",
-      "Categorized news sections for better content navigation.",
-      "Responsive design for an optimal viewing experience on all devices.",
-      "Built with Vite for fast development and performance optimization.",
-      "Clean and accessible UI components powered by shadcn/ui and Tailwind CSS.",
-    ],
-    techStack: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vite",
-      "shadcn-ui",
-    ],
-    challenges: [
-      "Integrating and managing dynamic data from the News API.",
-      "Designing a clean UI to handle real-time content updates efficiently.",
-      "Optimizing performance and build times using Vite.",
-      "Ensuring responsiveness and accessibility across devices.",
-    ],
-    learnings: [
-      "Improved understanding of working with external APIs in React applications.",
-      "Enhanced experience in using TypeScript for type-safe development.",
-      "Learned to optimize frontend builds using Vite and modular UI design.",
-      "Developed better state management practices for dynamic data handling.",
-    ],
-    feedback: true,
-    links: {
-      live: "https://news-hub-seven-chi.vercel.app/",
-      github: "https://github.com/adityadomle/news-hub",
-    },
+  title: "My Calendar",
+  slug: "my-calendar",
+  tagline:
+    "An enterprise calendar and scheduling system built with Java, JEE, and integrated messaging services.",
+  overview:
+    "My Calendar is a web-based scheduling and calendar management application designed to streamline event planning, reminders, and team coordination. Built with Java/JEE and a classic MVC architecture, it integrates external services such as Google Calendar and Twilio to enable real-time notifications and seamless synchronization, delivering a reliable and user-friendly enterprise solution.",
+  features: [
+    "Event creation, editing, and calendar-based scheduling",
+    "Real-time notifications via SMS using Twilio API",
+    "Google Calendar synchronization",
+    "User authentication and role-based access control",
+    "Persistent data storage with MySQL",
+  ],
+  techStack: [
+    "Java",
+    "JEE",
+    "JSP",
+    "JavaScript",
+    "HTML5/CSS3",
+    "MySQL",
+    "Twilio API",
+    "Google Calendar API",
+  ],
+  challenges: [
+    "Integrating third-party services like Google Calendar and Twilio reliably",
+    "Designing a scalable calendar data model for recurring events",
+    "Ensuring secure authentication and data persistence",
+    "Maintaining UI responsiveness with server-rendered JSP pages",
+  ],
+  learnings: [
+    "Gained hands-on experience integrating external APIs in enterprise Java applications",
+    "Strengthened backend design using JEE and MVC architecture patterns",
+    "Improved understanding of event scheduling logic and calendar systems",
+    "Enhanced skills in building secure, data-driven web applications",
+  ],
+  feedback: true,
+  links: {
+    github: "https://github.com/DhiaNeji/FullStack-Calendar",
   },
+    images: [
+    "/projects/calendar/1.png",
+    "/projects/calendar/2.png",
+    "/projects/calendar/3.png",
+    "/projects/calendar/4.png", 
+    "/projects/calendar/5.png",
+  ],
+},
+ {
+  title: "E-Shop",
+  slug: "e-shop",
+  tagline:
+    "A scalable e-commerce platform built using microservices architecture with Spring Boot and distributed systems patterns.",
+  overview:
+    "E-Shop is a modern e-commerce application designed with a microservices architecture to ensure scalability, resilience, and high availability. The system leverages asynchronous and synchronous inter-service communication, service discovery, and fault tolerance mechanisms to deliver a robust and production-ready shopping experience.",
+  features: [
+    "Microservices-based architecture for modular and scalable development",
+    "Asynchronous communication using Kafka for event-driven workflows",
+    "Synchronous service-to-service calls using WebClient",
+    "Service discovery and registration with Netflix Eureka",
+    "Fault tolerance and resilience using Resilience4j circuit breakers",
+    "Polyglot persistence with PostgreSQL",
+  ],
+  techStack: [
+    "Java",
+    "Spring Boot",
+    "Apache Kafka",
+    "WebClient",
+    "Resilience4j",
+    "PostgreSQL",
+    "Netflix Eureka",
+  ],
+  challenges: [
+    "Designing reliable communication between distributed microservices",
+    "Ensuring system resilience and fault tolerance under service failures",
+    "Managing data consistency across relational and non-relational databases",
+    "Implementing scalable service discovery and load balancing",
+  ],
+  learnings: [
+    "Gained strong experience designing and implementing microservices architectures",
+    "Improved understanding of event-driven systems using Kafka",
+    "Learned resilience patterns such as circuit breakers and fallback strategies",
+    "Enhanced skills in distributed systems communication and service orchestration",
+  ],
+  feedback: true,
+  links: {
+    live: "",
+    github: "https://github.com/DhiaNeji/MobileProject",
+  },
+},
+{
+  title: "Database Encryption & Decryption",
+  slug: "postgresql-encryption",
+  tagline:
+    "A secure data protection system implementing AES encryption strategies in PostgreSQL.",
+  overview:
+    "This project focuses on securing sensitive database fields by implementing encryption and decryption mechanisms directly at the PostgreSQL level. It uses AES-256 encryption in CBC mode through stored procedures and triggers, while also demonstrating the weaknesses of ECB mode by analyzing frequency-based attack patterns.",
+  features: [
+    "Column-level encryption and decryption using AES-256 in CBC mode",
+    "PostgreSQL procedures and triggers for transparent data protection",
+    "Demonstration of ECB mode vulnerabilities through frequency analysis",
+    "Secure handling of sensitive data at rest",
+    "Database-level security enforcement without application changes",
+  ],
+  techStack: [
+    "PostgreSQL",
+    "PL/pgSQL",
+    "AES-256 Encryption",
+  ],
+  challenges: [
+    "Implementing strong encryption logic within database procedures",
+    "Ensuring performance efficiency while encrypting/decrypting data",
+    "Demonstrating cryptographic weaknesses in ECB mode securely",
+    "Maintaining data integrity during encryption workflows",
+  ],
+  learnings: [
+    "Deepened understanding of cryptographic modes and database security",
+    "Gained hands-on experience implementing encryption at the database layer",
+    "Improved knowledge of PostgreSQL triggers and procedures",
+    "Learned how to analyze and demonstrate cryptographic vulnerabilities safely",
+  ],
+  feedback: true,
+  links: {
+    live: "",
+    github: "",
+  },
+},
   {
-    title: "Freshmart Store | Modern Grocery Web App",
-    slug: "freshmart-store",
-    tagline:
-      "A clean, modern, and responsive grocery store web app built with React, Vite, Redux, and Tailwind CSS.",
-    overview:
-      "Freshmart Store is a modern grocery shopping platform designed to offer users a seamless and visually appealing experience. Built using React and Vite, it focuses on performance and smooth navigation. Redux ensures efficient state management for cart operations and product handling, while Tailwind CSS provides a clean and responsive interface optimized for all devices.",
-    features: [
-      "Modern and responsive UI optimized for all screen sizes.",
-      "Smooth routing and navigation for an app-like experience.",
-      "State management using Redux for efficient cart and product updates.",
-      "Fast development and performance optimization powered by Vite.",
-      "Clean design and user-friendly layout for better usability.",
-    ],
-    techStack: [
-      "React",
-      "Vite",
-      "Redux",
-      "Tailwind CSS",
-    ],
-    challenges: [
-      "Implementing scalable state management with Redux.",
-      "Ensuring responsive and consistent UI across devices.",
-      "Optimizing performance and build speed using Vite.",
-      "Designing a smooth and intuitive navigation flow.",
-    ],
-    learnings: [
-      "Enhanced understanding of Redux for managing global state efficiently.",
-      "Improved skills in responsive UI design using Tailwind CSS.",
-      "Learned performance tuning techniques with Vite.",
-      "Gained experience in creating scalable and maintainable frontend structures.",
-    ],
-    feedback: true,
-    links: {
-      live: "https://freshmart-store.vercel.app",
-      github: "https://github.com/adityadomle/freshmart-store",
-    },
+  title: "Trade API",
+  slug: "trade-api-Java",
+  tagline:
+    "A Java-based trade platform enabling users to exchange personal items efficiently and securely.",
+  overview:
+    "Trade API is a backend application designed to allow users to trade items such as furniture, clothes, and books. It features robust user role management, inter-service communication using RabbitMQ, and automated email notifications with Mailgun, ensuring a seamless and secure trading experience.",
+  features: [
+    "User registration, authentication, and role management",
+    "Item listing, trading, and management functionality",
+    "Inter-service messaging using RabbitMQ",
+    "Automated HTML email notifications via Mailgun",
+    "Secure and efficient backend API built in Java",
+  ],
+  techStack: [
+    "Java",
+    "Spring boot",
+    "RabbitMQ",
+    "Mailgun",
+    "REST API",
+  ],
+  challenges: [
+    "Implementing reliable inter-service communication with RabbitMQ",
+    "Ensuring secure and accurate role-based access control",
+    "Integrating automated email notifications using Mailgun",
+  ],
+  learnings: [
+    "Gained experience building backend services in Java",
+    "Learned to implement inter-service communication with message brokers",
+    "Improved understanding of email automation in application workflows",
+    "Enhanced skills in secure role-based user management",
+  ],
+  feedback: true,
+  links: {
+    live: "",
+    github: "",
   },
-  {
-    title: "GitHub Profile Viewer | Instant GitHub Insights",
-    slug: "github-profile-viewer",
-    tagline:
-      "An interactive web app to instantly view GitHub profiles with clean UI built using HTML, CSS, and JavaScript.",
-    overview:
-      "GitHub Profile Viewer allows users to instantly fetch and view detailed GitHub profiles using the GitHub REST API. The app displays essential user information including profile picture, name, bio, followers, repositories, and more. With a responsive and minimalist interface, it offers a smooth experience for exploring any GitHub account directly from the browser.",
-    features: [
-      "Instantly search and view any GitHub user's profile.",
-      "Displays profile picture, username, bio, followers, and repositories.",
-      "Responsive and clean user interface for better readability.",
-      "Utilizes GitHub REST API for fetching real-time profile data.",
-      "Lightweight structure ensuring fast performance and accessibility.",
-    ],
-    techStack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "GitHub API",
-    ],
-    challenges: [
-      "Fetching and managing API data efficiently with JavaScript.",
-      "Designing a clean, minimal, and responsive interface.",
-      "Handling errors for invalid or non-existent GitHub users.",
-      "Ensuring smooth and fast data rendering without frameworks.",
-    ],
-    learnings: [
-      "Strengthened understanding of API integration using JavaScript.",
-      "Improved skills in building responsive layouts with pure CSS.",
-      "Learned effective DOM manipulation and async handling.",
-      "Enhanced ability to design lightweight, framework-free web apps.",
-    ],
-    feedback: true,
-    links: {
-      live: "https://adityadomle.github.io/GitHub-Profile-Viewer/",
-      github: "https://github.com/adityadomle/GitHub-Profile-Viewer",
-    },
-  },
+}
+
 ];

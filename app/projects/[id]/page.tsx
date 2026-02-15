@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { siteConfig } from '@/config/site';
 import { ArrowLeftIcon, ExternalLinkIcon } from 'lucide-react';
 import Link from 'next/link';
+import Image from "next/image";
 
 const getProject = async (slug: string) => {
   return projects.find((project) => project.slug === slug);
@@ -106,20 +107,6 @@ const ProjectDetails = async ({
           </ul>
         </div>
 
-        {project.feedback && (
-          <div id="feedback" className="my-4">
-            <h2 className="text-lg font-semibold">Feedback</h2>
-            <p>
-              For feedback or suggestions, contact me at:{' '}
-              <Link href={siteConfig.links.email}>
-                <span className="text-primary">
-                  {siteConfig.links.email.replace('mailto:', '')}
-                </span>
-              </Link>
-            </p>
-          </div>
-        )}
-
         {project.links && (
           <div id="links" className="my-4">
             <h2 className="text-lg font-semibold">
@@ -142,9 +129,67 @@ const ProjectDetails = async ({
                   </Badge>
                 </Link>
               )}
+              {project.links.report && (
+                <Link href={project.links.report} target="_blank">
+                  <Badge variant="outline" className="px-4 text-base">
+                    Report [French version] <ExternalLinkIcon className="w-4 h-4 -mt-2" />
+                  </Badge>
+                </Link>
+              )}
+              {project.links.profile && (
+                <Link href={project.links.profile} target="_blank">
+                  <Badge variant="outline" className="px-4 text-base">
+                    Freelance Profile <ExternalLinkIcon className="w-4 h-4 -mt-2" />
+                  </Badge>
+                </Link>
+              )}
             </div>
           </div>
         )}
+        {project.images && project.images.length > 0 && (
+        <div id="gallery" className="my-1">
+          <h2 className="text-lg font-semibold mb-4">Project Gallery</h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {project.images.map((image, index) => (
+              <div
+                key={index}
+                className="relative w-full h-64 rounded-lg overflow-hidden shadow-md"
+              >
+                <Image
+                  src={image}
+                  alt={`${project.title} screenshot ${index + 1}`}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        )}
+        {project.testimonials && project.testimonials.length > 0 && (
+        <div id="gallery" className="my-6">
+          <h2 className="text-lg font-semibold mb-4">What people say about me</h2>
+
+          <div className="flex flex-col gap-6">
+            {project.testimonials.map((image, index) => (
+              <div
+                key={index}
+                className="relative w-full rounded-lg overflow-hidden shadow-md"
+              >
+                <Image
+                  src={image}
+                  alt={`${project.title} screenshot ${index + 1}`}
+                  width={1200}
+                  height={700}
+                  className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
+                />
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
       </div>
     </div>
   );

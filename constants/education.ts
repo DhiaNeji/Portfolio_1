@@ -3,18 +3,13 @@ import { TimelineViewerData } from '@/types/TimelineViewer.types';
 export const education: TimelineViewerData[] = [
   {
     title:
-      'Bachelor of Computer Application · GH Raisoni College of Engineering and Management · Nagpur, India',
-    date: 'Aug 2023 – June 2026 (Expected)',
-    description: `Pursuing BCA with a focus on programming, web development, and software engineering. Current CGPA: 8.40.`,
+      'Software Engineering · SUP\'COM · Tunisia',
+    date: 'Sep 2020 – Oct 2023',
+    description: `Pursuing software engineering with a focus on programming, web development, and software engineering.`,
   },
   {
-    title: 'Higher Secondary Education · NPW Science College · Lakhani',
+    title: 'Bachelor\'s degree · ISET Rades · Tunisia',
     date: 'July 2021 – May 2023',
-    description: `Completed 12th in Information Technology. Overall: 70%, IT: 95%.`,
-  },
-  {
-    title: 'Secondary Education · Shivaji Vidyalaya Seloti/Manegaon · SEE',
-    date: 'Apr 2012 – Mar 2021',
-    description: `Completed 10th grade with 82%. Assisted peers in learning computer skills through hands-on lab sessions.`,
-  },
+    description: `Completed a Bachelor's degree in Computer Science, building a strong foundation in software development and computer systems.`,
+  }
 ];

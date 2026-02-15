@@ -17,15 +17,12 @@ const EducationPage = () => {
         </PageHeaderHeading>
         <PageHeaderDescription>
           Education has always been the cornerstone of my journey into the tech
-          world. Pursuing a Bachelor's in Computer Application (BCA) at GH Raisoni
-          College of Engineering and Management, Nagpur, has provided me a
-          strong foundation in computer science and software development.
+          world. Pursuing an engineering degree in Software Engineering at Sup'Com
+          , has provided me a strong foundation in computer science and software development.
         </PageHeaderDescription>
 
         <PageHeaderDescription>
-          My academic journey has been complemented by hands-on projects and
-          coursework, enabling me to build practical skills and a deep
-          understanding of modern technological solutions.
+          My journey in tech started with a Bachelor’s degree at ISET Rades, where I graduated as major of my promotion. Building on this strong foundation, I continued my studies at SUP’COM, further deepening my knowledge and practical skills in software engineering.
         </PageHeaderDescription>
       </PageHeader>
 

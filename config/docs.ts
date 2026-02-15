@@ -38,17 +38,7 @@ export const docsConfig = {
           title: 'Education',
           href: '/education',
           items: [],
-        },
-        {
-          title: 'Contact',
-          href: '/contact',
-          items: [],
-        },
-        {
-          title: 'Stats',
-          href: '/stats',
-          items: [],
-        },
+        }
       ],
     },
   ],

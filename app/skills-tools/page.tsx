@@ -17,10 +17,7 @@ const SkillsToolsPage = () => {
           Learned by coding all night and debugging all day!
         </PageHeaderHeading>
         <PageHeaderDescription>
-          As a full-stack Software Engineer, I specialize in building scalable
-          web applications using modern technologies such as Next.js, React, and
-          Tailwind CSS. I'm also expanding my expertise into DevOps and cloud
-          practices to create efficient, maintainable, robust web solutions.
+          As a full-stack Software Engineer, I specialize in building scalable and maintainable web applications using Java, JavaScript, and TypeScript, along with modern frameworks such as Angular, Vue, and ExtJs. I also work on backend development with Java/JEE and Spring Boot, and I’m expanding my expertise into DevOps and cloud practices to deliver robust, efficient, and enterprise-ready solutions.
         </PageHeaderDescription>
       </PageHeader>
 

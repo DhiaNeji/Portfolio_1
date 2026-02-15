@@ -9,27 +9,19 @@ const AboutMePage = () => {
   return (
     <>
       <PageHeader>
-        <PageHeaderHeading>About Aditya</PageHeaderHeading>
+        <PageHeaderHeading>Dhia Neji</PageHeaderHeading>
         <PageHeaderHeading className="mt-2 text-muted-foreground">
           More than just a title—let’s dive deeper!
         </PageHeaderHeading>
         <PageHeaderDescription>
-          I am a passionate Software Engineer with a knack for building
-          full-stack web applications using modern technologies like Next.js and
-          Tailwind CSS. My journey in tech began with a curiosity for solving
-          real-world problems through innovative solutions, which evolved into a
-          love for crafting user-centric digital experiences.
+          I am a passionate Software Engineer and Java Developer with a strong focus on building scalable, full-stack web applications using Java, JavaScript, and TypeScript, along with frameworks such as Angular, Vue.js and Extjs. I enjoy transforming complex business needs into clean, efficient, and user-friendly solutions.
         </PageHeaderDescription>
 
         <PageHeaderDescription>
-          With a strong foundation in JavaScript frameworks, I focus on creating scalable, efficient, and visually appealing applications. Currently, I am diving deeper into backend development with Node.js and Express to expand my skill set and deliver powerful, server-side solutions.
-        </PageHeaderDescription>
+          With solid experience across modern frontend frameworks and enterprise backend systems, I specialize in delivering performant, maintainable applications with strong attention to usability and architecture. I continue to deepen my backend expertise in Java to design robust, secure, and scalable server-side solutions.        </PageHeaderDescription>
 
         <PageHeaderDescription>
-          Beyond coding, I thrive in collaborative environments and enjoy
-          tackling challenging problems with creative solutions. I aim to
-          contribute to impactful projects that make a difference in users'
-          lives.
+          Beyond coding, I thrive in collaborative environments and enjoy solving challenging problems with creative and pragmatic approaches. My goal is to contribute to impactful projects that create real value for users and organizations.
         </PageHeaderDescription>
       </PageHeader>
 

@@ -62,16 +62,6 @@ export function SiteHeader() {
               <CommandMenu />
             </div>
 
-            {/* Live Clock */}
-            <div className="hidden items-center gap-2 rounded-full border border-border/40 bg-muted/30 px-3 py-1.5 backdrop-blur-sm lg:flex">
-              <div className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-              </div>
-              <span className="text-xs font-medium tabular-nums tracking-tight text-foreground">
-                {formattedTime}
-              </span>
-            </div>
 
             {/* Action Buttons */}
             <div className="flex items-center gap-1">

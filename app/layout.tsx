@@ -25,19 +25,17 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url),
   keywords: siteConfig.keywords,
   authors: [
     {
-      name: 'Aditya Domle',
+      name: 'Dhia Neji',
       url: 'https://imaditya.vercel.app',
     },
   ],
-  creator: 'Aditya Domle',
+  creator: 'Dhia Neji',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,

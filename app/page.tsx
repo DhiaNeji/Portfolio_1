@@ -14,17 +14,31 @@ const IntroductionPage = async () => {
   return (
     <>
       <PageHeader>
-        <PageHeaderHeading>Aditya Domle</PageHeaderHeading>
+        <div className="flex items-center gap-4">
+          <img
+            src="me.png"
+            alt="Dhia Neji"
+            className="w-16 h-16 rounded-full object-cover border-2 border-primary shadow-md"
+          />
+          <PageHeaderHeading>Dhia Neji</PageHeaderHeading>
+        </div>        
         <PageHeaderHeading className="mt-2 text-muted-foreground">
           A coder by day, problem-solver by night!
         </PageHeaderHeading>
         <PageHeaderDescription>
-          I am a dedicated Software Engineer specializing in full-stack
-          application development. I enjoy crafting responsive web solutions
-          using modern technologies like Next.js, React, Tailwind CSS, Node.js,
-          Express, and MongoDB, while also applying DevOps practices, continuously
-          aiming to deliver high-quality, comprehensive, user-centric software solutions.
+          I am a dedicated Java developer specializing in building scalable enterprise applications using Java, JEE, and Spring Boot, with strong experience in frontend technologies including Angular, Vue.js, and ExtJS. I focus on delivering high-quality, maintainable, and user-centric software solutions while collaborating effectively in agile teams.
         </PageHeaderDescription>
+        
+        <PageHeaderHeading className="mt-2 text-muted-foreground">
+        What my freelance clients say about my work
+        </PageHeaderHeading>
+          <div className="mt-4 flex justify-center">
+            <img
+              src="/reviews.jpg" 
+              alt="Dhia Neji"
+            />
+          </div>
+
         <PageActions>
           <Button asChild size="sm" className="rounded-md">
             <Link href={siteConfig.links.resume} target="_blank">
