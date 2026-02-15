@@ -125,7 +125,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
                         </div>
                       </div>
                     </main>
-                    <SiteFooter />
                   </div>
                 </div>
               </div>
